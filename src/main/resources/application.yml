@@ -20,6 +20,12 @@ spring:
 server:
   port: 8080
 
+security:
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: ${JWT_EXPIRATION_MS:2592000000}
+
+
 springdoc:
   api-docs:
     path: /v3/api-docs
